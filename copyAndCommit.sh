@@ -1,6 +1,9 @@
 #!/bin/bash
+pushd /mnt/dta_system
 
-cp /mnt/dta_system/dta_data* /home/pi/workspace/dta-system_sample_data
+cp -r dta* /home/pi/workspace/dta-system_sample_data
+pushd
 git status
 git add *
-# git commit -m "new data"
+git commit -m "new data"
+git status
